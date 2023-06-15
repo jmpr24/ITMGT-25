@@ -209,11 +209,11 @@ def scytale_cipher(message, shift):
     scytale_cipher = ""
     while len(message) % shift != 0:
         message += "_"
-    scytale_cypher = ""
+    scytale_cipher = ""
     for i in range(len(message)):
         shift_letter = message[(i // shift) + (len(message) // shift) * (i % shift)]
-        scytale_cypher += shift_letter
-    return scytale_cypher
+        scytale_cipher += shift_letter
+    return scytale_cipher
 
 def scytale_decipher(message, shift):
     '''Scytale De-cipher.
